@@ -1,0 +1,80 @@
+/* Sidebar.css */
+.sidebar {
+    width: 200px;
+    /* good practice to use the position fixed on the sidebar that it must stick to the left in all the conditions  */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    transition: width 0.4s;
+}
+
+/* compound selector */
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar-header {
+    padding: 20px;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-item a {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-item a span {
+    margin-left: 10px;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.sidebar-footer a {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+/* Add to Sidebar.css */
+.user-profile {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.user-profile.collapsed {
+    padding-left: 10px;
+    padding-right: 10px;
+    /* display: none; */
+}
+
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.user-name {
+    margin-left: 10px;
+    color: #FFF;
+
+}
