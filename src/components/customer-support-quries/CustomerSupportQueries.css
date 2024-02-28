@@ -1,0 +1,87 @@
+.support-queries-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    max-width: 600px;
+}
+
+.support-queries-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.queries-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.query-card {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-left: 5px solid transparent;
+    /* Color will be set based on priority */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.query-card:hover {
+    background-color: #eeeeee;
+}
+
+.query-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.query-content p {
+    margin: 0;
+    font-weight: 500;
+}
+
+.query-content small {
+    display: block;
+    margin-top: 8px;
+    color: #666666;
+}
+
+.priority-flag {
+    margin-left: auto;
+    color: #dc3545;
+}
+
+.high {
+    border-left-color: #dc3545;
+    /* Red left border for high priority queries */
+}
+
+.medium {
+    border-left-color: #ffc107;
+    /* Yellow left border for medium priority queries */
+}
+
+.low {
+    border-left-color: #28a745;
+    /* Green left border for low priority queries */
+}
+
+.query-card .query-icon {
+    min-width: 30px;
+    /* Ensure icons align nicely */
+}
+
+/* Additional responsive design adjustments */
+@media (max-width: 768px) {
+    .support-queries-container {
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    .query-card {
+        padding: 10px;
+    }
+}

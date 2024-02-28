@@ -1,0 +1,96 @@
+.alerts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+}
+
+.alert-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-left: 4px solid;
+    /* Color will be set inline based on alert type */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.alert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.alert-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.alert-message {
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.see-details-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.see-details-btn:hover {
+    background-color: #0056b3;
+}
+
+.see-all-btn {
+    align-self: center;
+    margin-top: 20px;
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.see-all-btn:hover {
+    background-color: #1d2124;
+}
+
+/* Status colors */
+.yellow {
+    color: #ffc107;
+}
+
+.red {
+    color: #dc3545;
+}
+
+.green {
+    color: #28a745;
+}
+
+.grey {
+    color: #6c757d;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .alerts-container {
+        margin: 10px;
+    }
+
+    .alert-card {
+        padding: 10px;
+    }
+
+    .see-details-btn,
+    .see-all-btn {
+        padding: 6px 12px;
+    }
+}
