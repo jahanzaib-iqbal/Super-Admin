@@ -1,0 +1,68 @@
+.revenue-statistics {
+    display: flex;
+
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.revenue-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 250px;
+    /* or any other width depending on your layout */
+    text-align: center;
+}
+
+.revenue-card-header {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.revenue-chart-container {
+    height: 200px;
+    /* Fixed height for the chart */
+}
+
+.revenue-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.total-revenue {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.revenue-change {
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.positive {
+    color: #28a745;
+}
+
+.negative {
+    color: #dc3545;
+}
+
+@media (max-width: 768px) {
+    .revenue-statistics {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .revenue-card {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+}

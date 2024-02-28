@@ -1,0 +1,28 @@
+.swap-btn-container {
+    border: 1px solid black;
+    width: fit-content;
+
+    border-radius: 20px;
+    display: flex;
+}
+
+.item {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: transparent;
+
+}
+
+.item:hover {
+    background-color: gray;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+.item.active {
+    background-color: gray;
+    border-radius: 20px;
+
+}
