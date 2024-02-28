@@ -1,0 +1,10 @@
+.trend-chart {
+    margin-top: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.booking-trends {
+    width: 70%;
+}

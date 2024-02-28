@@ -1,14 +1,14 @@
 
 import './App.css'
-import BookingOverview from './components/booking-overview'
-import Sidebar from './components/sidebar'
 
+import Sidebar from './components/sidebar'
+import Dashboard from './pages/dashboard'
 function App() {
 
 
   return (
 
-    <BookingOverview />
+    <Dashboard />
   )
 }
 
