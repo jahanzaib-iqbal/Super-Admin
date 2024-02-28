@@ -56,7 +56,7 @@ const Sidebar = () => {
             </div>
             <ul className="sidebar-menu">
                 {menuItem.map((item, index) => (
-                    <li key={index} className="menu-item">
+                    <li key={index} className={`menu-item ${collapsed ? 'collapsed' : ''}`}>
                         <a href={item.path}>
                             {item.icon}
                             {!collapsed && <span>{item.name}</span>}
@@ -64,8 +64,8 @@ const Sidebar = () => {
                     </li>
                 ))}
             </ul>
-            <div className="sidebar-footer">
-                <a href="/logout">
+            <div className={`sidebar-footer ${collapsed ? 'collapsed' : ''}`}>
+                <a href="/logout" className={`${collapsed ? 'footer-collapsed' : ''}`}>
                     <FaSignOutAlt />
                     {!collapsed && <span>Logout</span>}
                 </a>

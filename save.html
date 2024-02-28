@@ -1,0 +1,21 @@
+<div className="recent-bookings">
+    <h3>Recent Bookings</h3>
+    <div className="grid-container">
+        {bookingsData.map((booking) => (
+        <div className="card" key={booking.id}>
+            <div className="card-image">
+                <img src={booking.carModelImage} alt={booking.carModel} /> {/* Placeholder image path */}
+            </div>
+            <div className="card-content">
+                <div className="card-header">
+                    <h4>{booking.customerName}</h4>
+                    <span className={`status ${booking.status.toLowerCase()}`}>{booking.status}</span>
+                </div>
+                <p><strong>ID:</strong> {booking.id}</p>
+                <p><strong>Car Model:</strong> {booking.carModel}</p>
+                <p><strong>Date:</strong> {booking.date}</p>
+            </div>
+        </div>
+        ))}
+    </div>
+</div>
