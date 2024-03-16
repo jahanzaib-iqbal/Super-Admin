@@ -1,15 +1,22 @@
 
 import './App.css'
+import Layout from './layout'
 
-import Sidebar from './components/sidebar'
 import Dashboard from './pages/dashboard'
+import Router from './pages/router'
 function App() {
 
 
   return (
 
-    <Dashboard />
+    <div className="App">
+    <Layout>
+      <Router />
+    </Layout>
+  </div>
   )
 }
 
 export default App
+
+

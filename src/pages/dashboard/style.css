@@ -1,11 +1,7 @@
 .booking-overview {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    max-width: 1200px;
+
     margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 .booking-container {
@@ -18,5 +14,12 @@
 .revenue-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+}
+
+.card-table-container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }

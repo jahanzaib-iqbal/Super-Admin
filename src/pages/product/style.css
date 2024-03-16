@@ -1,0 +1,51 @@
+.vehicle-management {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.toolbar {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #003974;
+}
+
+.vehicle-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.vehicle-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vehicle-details h3 {
+    margin-top: 0;
+}
+
+.vehicle-actions {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.vehicle-actions button {
+    margin-left: 10px;
+}

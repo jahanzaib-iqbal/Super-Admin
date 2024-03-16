@@ -1,0 +1,56 @@
+/* ButtonComponent.css */
+.add-vehicle-button {
+    background-color: #007bff;
+    /* Blue background */
+    color: white;
+    /* White text */
+    padding: 10px 20px;
+    /* Padding around the text */
+    font-size: 16px;
+    /* Size of the text */
+    border: none;
+    /* No border */
+    border-radius: 4px;
+    /* Rounded corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    outline: none;
+    /* Remove outline */
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Align items vertically */
+    justify-content: center;
+    /* Center items horizontally */
+    gap: 8px;
+    /* Gap between icon and text */
+    width: fit-content;
+}
+
+.add-vehicle-button:hover {
+    background-color: #0056b3;
+    /* Darker blue background on hover */
+}
+
+.add-vehicle-button:active {
+    background-color: #004080;
+    /* Even darker blue background when active */
+}
+
+/* Adding font-awesome for icon */
+/* You can include this in your HTML or import it in your JavaScript entry file */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+/* Adjust the font-size if you want a bigger or smaller icon */
+.add-vehicle-button::before {
+    content: '+';
+    /* Here you could use a font-awesome icon like below */
+    /* content: '\f067'; */
+    /* Plus icon from font-awesome */
+    /* Adjust your font-family to use font-awesome if you are using an icon */
+    /* font-family: 'Font Awesome 5 Free'; */
+    font-weight: bold;
+    /* Make the plus sign bold */
+    margin-right: 5px;
+    /* Space between the plus sign and the text */
+}

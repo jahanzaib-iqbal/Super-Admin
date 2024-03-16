@@ -10,6 +10,7 @@ import FeedbackCard from '../../components/card/feedback-card'
 import ProductAlerts from '../../components/Product'
 import CustomerSupportQueries from '../../components/customer-support-quries'
 import SystemNotifications from '../../components/notification'
+import RecentBookings from '../../components/card/recent-booking'
 function Dashboard() {
     // use the time frame for the revenue card
     const [timeFrame, SetTimeFrame] = useState('Daily');
@@ -67,19 +68,25 @@ function Dashboard() {
             <DashboardCards />
             <div className="booking-container">
                 <BookingChart />
+            </div>
+
+            <div className="card-table-container">
 
                 <div className="revenue-container">
-
                     <SwapBtn onChangeTimeFrame={changeTimeFrame} />
                     <RevenueStatistics revenueData={revenueData.filter((data) => data.title.includes(timeFrame))} />
                 </div>
+                <div className="recent-table">
+                    <h2>Recent Bookings</h2>
+                    <RecentBookings />
+                </div>
             </div>
 
-            <RecentBookingCard />
+            {/* <RecentBookingCard />
             <FeedbackCard />
             <ProductAlerts />
             <CustomerSupportQueries />
-            <SystemNotifications />
+            <SystemNotifications /> */}
         </div>
     )
 }

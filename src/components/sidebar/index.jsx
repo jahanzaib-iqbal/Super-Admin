@@ -1,31 +1,8 @@
-// import React from 'react'
 
-// function Sidebar() {
-//     return (
-//         <div className='sidebar'>
-//             <div className="logo-container">
-//                 <h3>Travelix</h3>
-//             </div>
-//             <hr />
-//             <div className="profile-container">
-//                 <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" alt="user profile image" />
-//                 <h2>Hamdan</h2>
-//                 <button>Edit profile</button>
-//             </div>
-//             <hr />
-
-//         </div>
-//     )
-// }
-
-// export default Sidebar;
-
-
-// Sidebar.js
 import React, { useState } from 'react';
 import { FaHome, FaCar, FaCalendarAlt, FaUsers, FaComments, FaChartPie, FaCog, FaBars, FaSignOutAlt } from 'react-icons/fa';
 import './Sidebar.css'; // Assuming you have a corresponding CSS file for styling
-
+import { Link } from 'react-router-dom';
 const Sidebar = () => {
     const [collapsed, setCollapsed] = useState(false);
 
@@ -34,7 +11,7 @@ const Sidebar = () => {
     const menuItem = [
         { name: 'Dashboard', icon: <FaHome />, path: '/dashboard' },
         { name: 'Bookings', icon: <FaCalendarAlt />, path: '/bookings' },
-        { name: 'Vehicles', icon: <FaCar />, path: '/vehicles' },
+        { name: 'Vehicles', icon: <FaCar />, path: '/product' },
         { name: 'Customers', icon: <FaUsers />, path: '/customers' },
         { name: 'Feedback', icon: <FaComments />, path: '/feedback' },
         { name: 'Chat Support', icon: <FaComments />, path: '/chat-support' },
@@ -57,10 +34,10 @@ const Sidebar = () => {
             <ul className="sidebar-menu">
                 {menuItem.map((item, index) => (
                     <li key={index} className={`menu-item ${collapsed ? 'collapsed' : ''}`}>
-                        <a href={item.path}>
+                        <Link to={item.path}>
                             {item.icon}
                             {!collapsed && <span>{item.name}</span>}
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>

@@ -1,0 +1,46 @@
+.cancel-booking-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .cancel-booking-container h3 {
+    color: #333;
+    margin-bottom: 16px;
+  }
+  
+  .cancel-booking-container p {
+    margin-bottom: 24px;
+  }
+  
+  .notification-options label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 14px;
+  }
+  
+  .notification-options input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  button {
+    background-color: #dc3545; /* Bootstrap danger color for emphasis */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #c82333;
+  }
+  

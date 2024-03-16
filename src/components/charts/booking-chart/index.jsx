@@ -59,8 +59,8 @@ function BookingChart() {
     }, []); // Empty dependency array ensures this effect runs only once on mount
 
     return (
-        <div className='container' style={{ height: '80%', width: '70%' }} >
-            <h4>Monthly Views</h4>
+        <div className='container' style={{ height: '75%', width: '100%' }} >
+            <h4 style={{ color: 'white', fontSize: 26 }}>Monthly Views</h4>
             <canvas ref={chartRef}></canvas>
         </div>
     );

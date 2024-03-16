@@ -1,0 +1,30 @@
+/* TabComponent.css */
+.tab-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+}
+
+.tab-button {
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    /* Hide border by default */
+}
+
+.tab-button:hover {
+    background-color: #e0e0e0;
+    /* Lighter grey on hover */
+}
+
+.active {
+    color: black;
+    border-bottom: 3px solid black;
+    /* Black border for active tab */
+}

@@ -1,0 +1,29 @@
+/* SearchBarComponent.css */
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 24px;
+    padding: 8px 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-icon {
+    color: #333;
+    margin-right: 8px;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    padding: 8px 0;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}

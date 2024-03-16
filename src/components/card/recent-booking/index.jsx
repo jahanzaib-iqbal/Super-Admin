@@ -1,33 +1,60 @@
-import React from 'react'
-import './style.css'
+import React from 'react';
+import './style.css'; // Make sure to create a corresponding CSS file
 
-// Dummy data for bookings
 const bookingsData = [
-    { id: 'B001', customerName: 'John Doe', carModel: 'Toyota Corolla', date: '2024-02-25', status: 'confirmed' },
-    // ... add more bookings data here
+    {
+        id: 'BK001',
+        customerName: 'John Doe',
+        bookingDate: '2024-03-01',
+        status: 'Confirmed'
+    },
+    {
+        id: 'BK001',
+        customerName: 'John Doe',
+        bookingDate: '2024-03-01',
+        status: 'Confirmed'
+    },
+    {
+        id: 'BK001',
+        customerName: 'John Doe',
+        bookingDate: '2024-03-01',
+        status: 'Confirmed'
+    },
+    {
+        id: 'BK001',
+        customerName: 'John Doe',
+        bookingDate: '2024-03-01',
+        status: 'Confirmed'
+    },
+    // Add more bookings as needed
 ];
-function RecentBookingCard() {
-    const recentBookings = bookingsData;
-    return (
-        <div className="recent-bookings">
-            <h3>Recent Bookings</h3>
-            <div className="booking-cards">
-                {recentBookings.map((booking) => (
-                    <div key={booking.id} className="booking-card">
-                        <div className="card-header">
-                            <span className="card-highlight">Booking ID: {booking.id}</span>
-                        </div>
-                        <div className="card-content">
-                            <p>Customer: <span>{booking.customerName}</span></p>
-                            <p>Car Model: <span>{booking.carModel}</span></p>
-                            <p>Date: <span>{booking.date}</span></p>
-                            <p>Status: <span className={`status ${booking.status.toLowerCase()}`}>{booking.status}</span></p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
-    )
-}
 
-export default RecentBookingCard
+const RecentBookings = () => {
+    return (
+        <div className="recent-bookings-container">
+          
+            <table className="bookings-table">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>Customer Name</th>
+                        <th>Booking Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {bookingsData.map((booking) => (
+                        <tr key={booking.id}>
+                            <td>{booking.id}</td>
+                            <td>{booking.customerName}</td>
+                            <td>{booking.bookingDate}</td>
+                            <td>{booking.status}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
+};
+
+export default RecentBookings;

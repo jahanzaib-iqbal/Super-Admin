@@ -1,0 +1,11 @@
+.app-container {
+    display: flex;
+    /* justify-content: flex-end; */
+}
+
+main {
+    margin-left: 200px;
+    padding: 40px 70px;
+    width: calc(100vw - 200px);
+    background-color: #282828;
+}
