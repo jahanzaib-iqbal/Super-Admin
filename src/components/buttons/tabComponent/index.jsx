@@ -1,27 +1,27 @@
-// TabComponent.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import './TabComponent.css';
-
-const TabComponent = () => {
-    const [activeTab, setActiveTab] = useState('All');
+const TabComponent = ({ activeTab, onChange }) => {
+    console.log("Active Tab on render: ", activeTab); // Debug: Log active tab
 
     const handleTabClick = (tab) => {
-        setActiveTab(tab);
+        console.log("Tab clicked: ", tab); // Debug: Log clicked tab
+        onChange(tab);
     };
 
     return (
         <div className="tab-container">
-            {['All', 'Active', 'Pending', 'Archived'].map((tab) => (
+            {['all', 'active', 'pending', 'archived'].map((tab) => (
                 <button
                     key={tab}
                     className={`tab-button ${activeTab === tab ? 'active' : ''}`}
                     onClick={() => handleTabClick(tab)}
                 >
-                    {tab}
+                    {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
             ))}
         </div>
     );
 };
+
 
 export default TabComponent;
