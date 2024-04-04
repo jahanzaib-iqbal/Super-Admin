@@ -9,13 +9,13 @@ function SwapBtn({ onChangeTimeFrame }) {
     return (
         <div>
             <div className="swap-btn-container">
-                <button className={`item ${active === 'Daily' ? 'active' : ''}`} onClick={() => changeActiveBtn('Daily')}>
+                <button className={`item ${active === 'Daily' ? 'active-swap' : ''}`} onClick={() => changeActiveBtn('Daily')}>
                     <span>Daily</span>
                 </button>
-                <button className={`item ${active === 'Weekly' ? 'active' : ''}`} onClick={() => changeActiveBtn('Weekly')}>
+                <button className={`item ${active === 'Weekly' ? 'active-swap' : ''}`} onClick={() => changeActiveBtn('Weekly')}>
                     <span>Weekly</span>
                 </button>
-                <button className={`item ${active === 'Yearly' ? 'active' : ''}`} onClick={() => changeActiveBtn('Monthly')}>
+                <button className={`item ${active === 'Monthly' ? 'active-swap' : ''}`} onClick={() => changeActiveBtn('Monthly')}>
                     <span>Monthly</span>
                 </button>
             </div>

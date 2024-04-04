@@ -60,7 +60,7 @@ function BookingChart() {
 
     return (
         <div className='container' style={{ height: '75%', width: '100%' }} >
-            <h4 style={{ color: 'white', fontSize: 26 }}>Monthly Views</h4>
+            <h4 style={{ color: 'black', fontSize: 26 }}>Monthly Views</h4>
             <canvas ref={chartRef}></canvas>
         </div>
     );

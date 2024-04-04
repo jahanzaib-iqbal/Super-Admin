@@ -4,48 +4,9 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 import './style.css';
 import VehicleEditModal from '../Modal/EditVehicleModal';
 
-const VehicleTable = ({ searchTerm, selectedTab }) => {
+const VehicleTable = ({ vehicles, setVehicles, searchTerm, selectedTab }) => {
+    const [editVehicle, setEditVehicle] = useState(null);
 
-
-
-    const [vehicles, setVehicles] = useState([
-        {
-            id: 1,
-            make: 'Honda',
-            model: 'Camry',
-            year: '2020',
-            vin: '4T1BF1FK5GU190221',
-            registration: '7XYZ123',
-            location: "San Francisco",
-            status: "Available",
-            features: 'GPS, Air Conditioning, Bluetooth, Backup Camera',
-            statusType: 'pending'
-        },
-        {
-            id: 2,
-            make: 'Toyota',
-            model: 'Camry',
-            year: '2020',
-            vin: '4T1BF1FK5GU190221',
-            registration: '7XYZ123',
-            location: "San Francisco",
-            status: "Available",
-            features: 'GPS, Air Conditioning, Bluetooth, Backup Camera',
-            statusType: 'pending'
-        },
-        {
-            id: 3,
-            make: 'Toyota',
-            model: 'Camry',
-            year: '2020',
-            vin: '4T1BF1FK5GU190221',
-            registration: '7XYZ123',
-            location: "San Francisco",
-            status: "Available",
-            features: 'GPS, Air Conditioning, Bluetooth, Backup Camera',
-            statusType: 'archived'
-        },
-    ]);
     const filteredVehicles = vehicles
         .filter(vehicle => selectedTab === 'all' || vehicle.statusType === selectedTab)
         .filter(vehicle =>
@@ -53,28 +14,22 @@ const VehicleTable = ({ searchTerm, selectedTab }) => {
             vehicle.model.toLowerCase().includes(searchTerm.toLowerCase())
         );
 
-    const [editVehicle, setEditVehicle] = useState(null); // State to manage currently edited vehicle
-
-    // Function to update vehicle details in the state
     const handleSaveChanges = (updatedVehicle) => {
-        const updatedVehicles = vehicles.map(vehicle => {
-            if (vehicle.id === updatedVehicle.id) {
-                return updatedVehicle;
-            }
-            return vehicle;
-        });
+        const updatedVehicles = vehicles.map(vehicle =>
+            vehicle.id === updatedVehicle.id ? updatedVehicle : vehicle
+        );
         setVehicles(updatedVehicles);
-        setEditVehicle(null); // Close the modal after saving changes
+        setEditVehicle(null);
     };
 
     const handleDeleteVehicle = (vehicleId) => {
         confirmAlert({
             title: 'Confirm to delete',
-            message: 'Are you sure to do this.',
+            message: 'Are you sure to do this?',
             buttons: [
                 {
                     label: 'Yes',
-                    onClick: () => setVehicles(prevVehicles => prevVehicles.filter(vehicle => vehicle.id !== vehicleId))
+                    onClick: () => setVehicles(vehicles.filter(vehicle => vehicle.id !== vehicleId))
                 },
                 {
                     label: 'No'

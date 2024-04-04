@@ -1,9 +1,9 @@
 .swap-btn-container {
     border: 1px solid black;
     width: fit-content;
-
     border-radius: 20px;
     display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .item {
@@ -11,6 +11,7 @@
     border: none;
     border-radius: 20px;
     background-color: transparent;
+    color: black;
 
 }
 
@@ -21,7 +22,7 @@
 
 }
 
-.item.active {
+.item.active-swap {
     background-color: gray;
     border-radius: 20px;
 
