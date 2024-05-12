@@ -11,6 +11,7 @@ import ProductAlerts from '../../components/Product'
 import CustomerSupportQueries from '../../components/customer-support-quries'
 import SystemNotifications from '../../components/notification'
 import RecentBookings from '../../components/card/recent-booking'
+
 function Dashboard() {
     // use the time frame for the revenue card
     const [timeFrame, SetTimeFrame] = useState('Daily');
