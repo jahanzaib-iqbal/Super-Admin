@@ -93,10 +93,10 @@ const Index = () => {
             </thead>
             <tbody>
               {filteredUsers.map((user, index) => (
-                <tr key={user.id}>
+                <tr key={index}>
                   <td>{index + 1}</td>
                   <td>
-                    <img src={user.image} alt="image" />
+                    <img className="userM-userImg" src={user.image} alt="image" />
                   </td>
                   <td>{user.name}</td>
                   <td>{user.email}</td>

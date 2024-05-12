@@ -1,0 +1,125 @@
+.ver-main-heading {
+  text-align: center;
+  color: #333;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.ver-heading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 0 1rem 0;
+}
+
+.ver-detail-title {
+  text-align: center;
+  /* text-decoration: underline; */
+}
+.ver-detail-title span {
+  color: grey;
+  font-weight: normal;
+  /* text-decoration: italic; */
+  font-style: italic;
+}
+
+.ver-modal-heading-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+  /* margin: 0; */
+}
+.ver-modal-heading-container h4,
+.ver-modal-heading-container p,
+.ver-head-idcard {
+  margin: 0;
+  margin: 0.5rem 0;
+}
+
+.ver-modal-img-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
+}
+
+.ver-id-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* ======== */
+.userM-userImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.ver-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.ver-modal.show {
+  display: block;
+}
+
+.ver-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 85%; /* Set a maximum height for the modal content */
+  overflow-y: auto; /* Allow vertical scrolling when content overflows */
+}
+
+.ver-modal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.ver-modal-yes-btn {
+  background-color: #f45c56;
+}
+
+.ver-modal-no-btn {
+  background-color: lightgreen;
+}
+
+.ver-modal-buttons button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.ver-detail-btn {
+  color: #333;
+  background-color: transparent;
+  border: 1px solid lightgrey;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  font-size: 16px; /* Maintain font size for visibility */
+}
+
+.ver-detail-btn:hover {
+  background-color: lightgreen;
+
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle box-shadow on hover */
+}

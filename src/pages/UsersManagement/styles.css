@@ -1,6 +1,6 @@
 .user-management {
   font-family: Inter, Arial, sans-serif;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .search-container {
@@ -67,7 +67,7 @@
   border-right: none; /* Remove right border for last column */
 }
 
-.user-table img {
+.userM-userImg {
   width: 50px;
   height: 50px;
   border-radius: 50%;

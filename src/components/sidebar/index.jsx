@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { FaHome, FaCar, FaCalendarAlt, FaUsers, FaComments, FaChartPie, FaCog, FaBars, FaSignOutAlt, FaUser, FaCreditCard } from 'react-icons/fa';
+import { FaHome,FaUserCheck, FaUsers, FaChartPie, FaCog, FaBars, FaSignOutAlt, FaUser, FaCreditCard } from 'react-icons/fa';
 import './Sidebar.css'; // Assuming you have a corresponding CSS file for styling
 import { Link } from 'react-router-dom';
 const Sidebar = () => {
@@ -12,6 +12,7 @@ const Sidebar = () => {
         { name: 'Dashboard', icon: <FaHome />, path: '/dashboard' },
         { name: 'Payment Transfer', icon: <FaCreditCard />, path: '/payments' },
         { name: 'Users', icon: <FaUser />, path: '/users' },
+        { name: 'Verification', icon: <FaUserCheck />, path: '/verification' },
         // { name: 'Customers', icon: <FaUsers />, path: '/customers' },
         // { name: 'Feedback', icon: <FaComments />, path: '/feedback' },
         // { name: 'Chat Support', icon: <FaComments />, path: '/chat-support' },
